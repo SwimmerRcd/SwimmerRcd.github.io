@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <p><em>github提供了github Pages来搭建一个小型的blog，步骤如下：</em></p>
+<ol>
+<li>
+<p>创建github帐号</p>
+</li>
+<li>
+<p>创建一个新的repo，<strong>该repo的名字，必须保持格式<username>.github.io</strong>，其中<username>替换成你的github账户名，然后点击确定，完成仓库的创建</p>
+</li>
+<li>
+<p>git clone到本地，push一个index.html到远程repo，可用markdown生成</p>
+<pre><code> …or create a new repository on the command line
+
+ echo &quot;# SwimmerRcd.github.io&quot; &gt;&gt; README.md
+ git init
+ git add README.md
+ git commit -m &quot;first commit&quot;
+ git remote add origin git@github.com:SwimmerRcd/SwimmerRcd.github.io.git
+ git push -u origin master
+                 
+
+ …or push an existing repository from the command line
+
+ git remote add origin git@github.com:SwimmerRcd/SwimmerRcd.github.io.git
+ git push -u origin master
+
+ …or import code from another repository
+
+ You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+</code></pre>
+</li>
+<li>
+<p>进入远程repos <username>.github.io，点击settings选项卡，向下拖动到GitHub Pages模块，可以看到 Your site is published at https://<username>.github.io/</p>
+</li>
+<li>
+<p>这时候打开博客网站https://<username>.github.io，你就可以看到你的博客了</p>
+</li>
+</ol>
+
+    </body>
+    </html>
