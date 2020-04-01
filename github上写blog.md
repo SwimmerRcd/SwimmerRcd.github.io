@@ -22,5 +22,5 @@
 
         You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
-4. 进入远程repos <username>.github.io，点击settings选项卡，向下拖动到GitHub Pages模块，可以看到 Your site is published at https://<username>.github.io/
-5. 这时候打开博客网站https://<username>.github.io，你就可以看到你的博客了
+4. 进入远程repos `<username>.github.io`，点击settings选项卡，向下拖动到GitHub Pages模块，可以看到 Your site is published at `https://<username>.github.io/`
+5. 这时候打开博客网站`https://<username>.github.io`，你就可以看到你的博客了
