@@ -9,7 +9,7 @@
 | 标题(downlevel)              | Ctrl+Shift+[ |
 | 包裹数学公式                 |    Ctrl+M    |
 | Check/Uncheck task list item |    Alt+C     |
-| list中的代码块               |   Tab Tab    |
+| list中的代码块               | Enter Tab Tab    |
 | 格式化table                  | Alt+Shift+F  |
 ![格式化table](https://raw.githubusercontent.com/yzhang-gh/vscode-markdown/master/images/gifs/table-formatter.gif)
 

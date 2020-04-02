@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>基础知识</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86">基础知识</h1>
+<h2 id="%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b%e5%8f%8a%e5%85%b6%e5%af%b9%e8%b1%a1%e5%8e%9f%e5%9e%8b%e6%8f%90%e4%be%9b%e7%9a%84%e6%96%b9%e6%b3%95">数据类型及其对象原型提供的方法</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a><br/></p>
+<ul>
+<li>
+<p>返回字符串中某个位置上的字符</p>
+<pre><code>  return 'cat'.charAt(1) // returns &quot;a&quot;
+  return 'cat'[1] // returns &quot;a&quot;
+</code></pre>
+</li>
+<li>
+<p>返回字符串长度</p>
+<pre><code>  const str = 'Life, the universe and everything. Answer:';
+  console.log(str + ' ' + str.length);
+  // expected output: &quot;Life, the universe and everything. Answer: 42&quot;
+</code></pre>
+</li>
+<li>
+<p>字符串拼接</p>
+<pre><code>  let longString = &quot;This is a very long string which needs &quot; +
+           &quot;to wrap across multiple lines because &quot; +
+           &quot;otherwise my code is unreadable.&quot;
+</code></pre>
+</li>
+<li>
+<p>长字符串断行
+let longString = &quot;This is a very long string which needs <br>
+to wrap across multiple lines because <br>
+otherwise my code is unreadable.&quot;</p>
+</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></p>
+<ul>
+<li>
+<p>添加元素到数组末尾：push()</p>
+<pre><code>  let fruits = ['Apple', 'Banana']
+  let newLength = fruits.push('Orange')
+  // [&quot;Apple&quot;, &quot;Banana&quot;, &quot;Orange&quot;]
+</code></pre>
+</li>
+<li>
+<p>移除数组末尾元素：pop()</p>
+<pre><code>  let last = fruits.pop() // remove Orange (from the end)
+  // [&quot;Apple&quot;, &quot;Banana&quot;]
+</code></pre>
+</li>
+<li>
+<p>移除数组开头元素：shift()</p>
+<pre><code>  let first = fruits.shift() // remove Apple from the front
+  // [&quot;Banana&quot;]
+</code></pre>
+</li>
+<li>
+<p>添加元素在数组开头：unshift()</p>
+<pre><code>  let newLength = fruits.unshift('Strawberry') // add to the front
+  // [&quot;Strawberry&quot;, &quot;Banana&quot;]
+</code></pre>
+</li>
+<li>
+<p>返回数组长度：length</p>
+<pre><code>  const fruits = []
+  fruits.push('banana', 'apple', 'peach')
+  console.log(fruits.length) // 3
+</code></pre>
+</li>
+<li>
+<p>遍历元素：forEach()</p>
+<pre><code>  let fruits = ['Apple', 'Banana']
+  fruits.forEach(function(item, index, array) {
+      console.log(item, index)
+  })
+  // Apple 0
+  // Banana 1
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="%e6%b5%81%e7%a8%8b%e6%8e%a7%e5%88%b6%e8%af%ad%e5%8f%a5">流程控制语句</h2>
+<p>for循环</p>
+<ul>
+<li>
+<p>退出当前循环或switch： break</p>
+<pre><code>  for(let i=1;i&lt;=10;i++) { 
+      if(i==8) { 
+          break; 
+      } 
+      document.write(i); 
+  } 
+</code></pre>
+</li>
+<li>
+<p>跳至循环的下一次：continue</p>
+<pre><code>  for(var i=1;i&lt;=10;i++) { 
+      if(i==8) { 
+          continue; 
+      } 
+      document.write(i); 
+  } 
+</code></pre>
+</li>
+<li>
+<p>退出当前函数：return</p>
+<pre><code>  for(var i=1;i&lt;=10;i++) { 
+      if(i==8) { 
+          return; 
+      } 
+  document.write(i); 
+  } 
+</code></pre>
+</li>
+</ul>
+
+    </body>
+    </html>
