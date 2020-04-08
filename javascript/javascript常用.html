@@ -46,10 +46,106 @@
 </code></pre>
 </li>
 <li>
-<p>长字符串断行
-let longString = &quot;This is a very long string which needs <br>
-to wrap across multiple lines because <br>
-otherwise my code is unreadable.&quot;</p>
+<p>长字符串断行</p>
+<pre><code>  let longString = &quot;This is a very long string which needs \
+  to wrap across multiple lines because \
+  otherwise my code is unreadable.&quot;
+</code></pre>
+</li>
+<li>
+<p>字符的ASCII码</p>
+<pre><code>          str=&quot;0&quot;;
+          code = str.charCodeAt(0); //48
+</code></pre>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">字串样版匹配</a></p>
+<pre><code>  let str = 'hello world!';
+  let result = /^hello/.test(str);
+  console.log(result); 
+  // true
+</code></pre>
+</li>
+<li>
+<p>判断字符串是否为非数字:
+function milliseconds(x) {
+if (isNaN(x)) {
+return 'Not a Number!';
+}
+return x * 1000;
+}</p>
+<pre><code>  console.log(milliseconds('100F'));
+  // expected output: &quot;Not a Number!&quot;
+
+  console.log(milliseconds('0.0314E+2'));
+  // expected output: 3140
+</code></pre>
+</li>
+</ul>
+<p>**注意：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN">isNaN</a>
+**</p>
+<ol>
+<li>Boolean的true会判断为数字1，false会判断为数字0</li>
+<li>null '' &quot;&quot; 这些空值会判断为数字0</li>
+<li>Date类型的值会判断为数字</li>
+</ol>
+<p>Number</p>
+<ul>
+<li>
+<p>n次方计算</p>
+<pre><code>  Math.pow(base, exponent) 
+  **参数**
+  base: 底的值
+  exponent: 表达式的指数值
+</code></pre>
+</li>
+<li>
+<p>非整数的 Number 类型无法用 ==（=== 也不行） 来比较</p>
+<pre><code>  console.log( Math.abs(0.1 + 0.2 - 0.3) &lt;= Number.EPSILON);
+</code></pre>
+</li>
+<li>
+<p>指数(power)</p>
+<pre><code>          0.0314e2 //3.14
+          .0618e1  //0.618
+          .1e2     //10
+          3.e-2    //0.03
+</code></pre>
+</li>
+<li>
+<p>小数(decimal)</p>
+<pre><code>          4.       //4.0
+          .5       //0.5
+</code></pre>
+</li>
+</ul>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></p>
+<ul>
+<li>
+<p>非</p>
+<pre><code>          let x = !(expression);
+</code></pre>
+</li>
+<li>
+<p>或</p>
+<pre><code>          let x = expression1 || expression2;
+</code></pre>
+</li>
+<li>
+<p>且</p>
+<pre><code>          let x = expression1 &amp;&amp; expression2;
+</code></pre>
+</li>
+</ul>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+<ul>
+<li>
+<p>是否为null</p>
+<pre><code>          const m = 'sky'.match(/[aeiou]/gi);
+          if (m === null) {
+                  console.log(0); //0
+          }
+</code></pre>
 </li>
 </ul>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></p>
