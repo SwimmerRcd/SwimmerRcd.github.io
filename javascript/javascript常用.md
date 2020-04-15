@@ -31,6 +31,13 @@
         let result = /^hello/.test(str);
         console.log(result); 
         // true
+- [字串样版使用"组"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  
+        const imageDescription = "This image has a resolution of 1440×900 pixels.";
+        const regexpSize = /([0-9]+)×([0-9]+)/;
+        const match = imageDescription.match(regexpSize);
+        console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
+        // expected output: "Width: 1440 / Height: 900."
 - 判断字符串是否为非数字: 
         function milliseconds(x) {
                 if (isNaN(x)) {
@@ -91,12 +98,12 @@ Number
                 }
   
 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- 添加元素到数组末尾：push()
+- 添加元素到数组末尾：push() ：返回值是新数组的长度
   
         let fruits = ['Apple', 'Banana']
         let newLength = fruits.push('Orange')
         // ["Apple", "Banana", "Orange"]
-- 移除数组末尾元素：pop()
+- 移除数组末尾元素：pop() : 返回值是最后一个元素
   
         let last = fruits.pop() // remove Orange (from the end)
         // ["Apple", "Banana"]
@@ -104,6 +111,11 @@ Number
 
         let first = fruits.shift() // remove Apple from the front
         // ["Banana"]
+- 移除指定下标元素：splice(index, count)
+  
+        let myAry = [2, 5, 9]
+        myAry.splice(-2, 1) // 删除倒数第二个开始的一个元素
+        //[2, 9]
 - 添加元素在数组开头：unshift()
   
         let newLength = fruits.unshift('Strawberry') // add to the front
@@ -121,6 +133,67 @@ Number
         })
         // Apple 0
         // Banana 1
+- 切片: slice([begin[, end]]) ：返回begin到end-1 这一段Array
+
+        const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+        
+        console.log(animals.slice(2));
+        // expected output: Array ["camel", "duck", "elephant"]
+        console.log(animals.slice(2, 4));
+        // expected output: Array ["camel", "duck"]
+        console.log(animals.slice(-3, -1));
+        // expected output: Array ['camel', 'duck']
+- 拼接多个数组为一个：concat()
+        
+        const array1 = ['a', 'b', 'c'];
+        const array2 = ['d', 'e', 'f'];
+        const array3 = array1.concat(array2);
+        
+        console.log(array3);
+        // expected output: Array ["a", "b", "c", "d", "e", "f"]
+- 排序：sort()
+  1. 默认排序（数字按小到大，字母按字母表顺序）
+   
+                const months = ['March', 'Jan', 'Feb', 'Dec'];
+                months.sort();
+                console.log(months);
+                // expected output: Array ["Dec", "Feb", "Jan", "March"]
+        
+                const array1 = [1, 30, 4, 21, 100000];
+                array1.sort();
+                console.log(array1);
+                // expected output: Array [1, 100000, 21, 30, 4]
+  2. 汉字排序（非ASCII码）：汉字是拼音首字母
+
+                var items = ['réservé', 'premier', 'communiqué', 'café', 'adieu', 'éclair'];
+                items.sort(function (a, b) {
+                        return a.localeCompare(b);
+                });
+                // items is ['adieu', 'café', 'communiqué', 'éclair', 'premier', 'réservé']
+
+  3. 修改排序方法
+   
+                var arr = [[1, 2, 3], [7, 2, 3], [3, 2, 3]];
+                arr.sort(function(x, y){
+                          return x[0] – y[0];
+                        }); // [[1, 2, 3], [3, 2, 3], [7, 2, 3]]
+                // > 0 : x放到y的后面
+                // = 0 : 不变
+                // < 0 : x放y的前面
+- 判断数组是几维数组
+        
+        var arr = [1,2,3,[1,2,3,1,3,[1,2,3,6,4,[1,2,3,1]]],2],a=1;
+        function multiarr(arr){
+		for (i=0;i<arr.length;i++){
+			if(arr[i] instanceof Array){ //重点: instanceof Array
+				a++;
+				arr = arr[i];
+				multiarr(arr);
+			}
+		}
+		return a;
+        }
+        console.log(multiarr(arr)); // 4
 ---
 ## 流程控制语句
 for循环

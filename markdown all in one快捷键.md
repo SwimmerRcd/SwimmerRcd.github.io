@@ -1,23 +1,24 @@
 
 # 常用快捷键
-| **Command**                  |   **Key**    |
-| :--------------------------- | :----------: |
-| 粗体                         |    Ctrl+B    |
-| 斜体                         |    Ctrl+I    |
-| 删除线                       |    Alt+S     |
-| 标题(uplevel)                | Ctrl+Shift+] |
-| 标题(downlevel)              | Ctrl+Shift+[ |
-| 包裹数学公式                 |    Ctrl+M    |
-| Check/Uncheck task list item |    Alt+C     |
-| list中的代码块               | Enter Tab Tab    |
-| 格式化table                  | Alt+Shift+F  |
+| **Command**                  |    **Key**    |
+| :--------------------------- | :-----------: |
+| 粗体                         |    Ctrl+B     |
+| 斜体                         |    Ctrl+I     |
+| 删除线                       |     Alt+S     |
+| 标题(uplevel)                | Ctrl+Shift+]  |
+| 标题(downlevel)              | Ctrl+Shift+[  |
+| 包裹数学公式                 |    Ctrl+M     |
+| Check/Uncheck task list item |     Alt+C     |
+| list中的代码块               | Enter Tab Tab |
+| 格式化table                  |  Alt+Shift+F  |
 ![格式化table](https://raw.githubusercontent.com/yzhang-gh/vscode-markdown/master/images/gifs/table-formatter.gif)
 
 # markdown常用命令
-| 作用 |                命令                 |
-| :--- | :---------------------------------: |
-| 强调 |        `*强调*`或者`_强调_`         |
-| 链接 | `[这是个链接](https://this.is.a/url)` |
+| 作用           |                   命令                   |
+| :------------- | :--------------------------------------: |
+| 强调           |           `*强调*`或者`_强调_`           |
+| 链接           |  `[这是个链接](https://this.is.a/url)`   |
+| 引用里面插链接 | >内容[链接](https://xxx.xxx.xxx)内容n... |
 
 # 一些有用的命令
 - Markdown: Create Table of Contents: 创建目录: F1/Ctrl+Shift+P --> ctoc
